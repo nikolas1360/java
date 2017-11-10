@@ -43,8 +43,8 @@ public class ImgVect implements Comparable<ImgVect>{
             }
 
         }
-        //System.out.println("Area totale del colore " + c +" : "+ areaTot);
-        return areaTot;
+        //System.out.println("Area totale del colore " + c +" : "+ (int)areaTot);
+        return (int)areaTot;
     }
 
 

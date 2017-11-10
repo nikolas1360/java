@@ -15,6 +15,7 @@ public class InkJetPrinter {
     }
 
     public void showCartridgesLevel(){
+        System.out. println("INK STATUS:");
         for(Colore c:Colore.values()){
             System.out. print(c.name()+" " +cartridge[c.ordinal()]+" ");
         }
