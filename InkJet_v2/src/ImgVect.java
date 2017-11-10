@@ -43,13 +43,12 @@ public class ImgVect implements Comparable<ImgVect>{
             }
 
         }
-        //System.out.println("Area totale del colore " + c +" : "+ (int)areaTot);
+        //
         return (int)areaTot;
     }
 
 
     public void stampaVettore(){
-        System.out.println("Elenco delle forme presenti in: "+ nomeImmagine);
         for(int i=0; i<formeInserite;i++){
             System.out.println((i+1)+") "+ forme[i].toString());
         }
@@ -67,7 +66,7 @@ public class ImgVect implements Comparable<ImgVect>{
 
     public String toString(){
         String str;
-        str= "Area totale: "+this.areaTotale() + ". Forme: \n";
+        str= "Area totale: "+(int)this.areaTotale() + "\nForme: \n";
         for(int i=0;i<formeInserite;i++){
             str+= forme[i].toString() + "\n";
         }

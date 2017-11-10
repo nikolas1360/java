@@ -15,7 +15,7 @@ public class InkJetPrinter {
     }
 
     public void showCartridgesLevel(){
-        System.out. println("INK STATUS:");
+
         for(Colore c:Colore.values()){
             System.out. print(c.name()+" " +cartridge[c.ordinal()]+" ");
         }
@@ -27,21 +27,15 @@ public class InkJetPrinter {
         for(Colore c:Colore.values()){
             if(c==col){
                 cartridge[c.ordinal()]=MAXLEVEL;
-                System.out.println("Cartuccia "+c.name()+" cambiata");
             }
         }
     }
     {}
     public void stampa(ImgVect img){
-        if(checkCartridgesLevel(img)){
-            for(Colore c: Colore.values()){
-                double areaTotC = img.areaTotaleColore(c);
-                cartridge[c.ordinal()]-=areaTotC;
-            }
-        }else{
-            System.out.println("impossibile stampare");
+        for(Colore c: Colore.values()){
+            double areaTotC = img.areaTotaleColore(c);
+            cartridge[c.ordinal()]-=areaTotC;
         }
-
     }
 
 
@@ -49,12 +43,10 @@ public class InkJetPrinter {
         for(Colore c:Colore.values()){
             double areaTotC = img.areaTotaleColore(c);
             if(areaTotC > cartridge[c.ordinal()]){
-                System.out.println("Colore "+c.name()+" insufficiente");
                 return false;
             }
         }
         return true;
-
     }
 
 
