@@ -29,7 +29,8 @@ public class Centralina {
         this.checkNumeroTelefono=true;
     }
     public boolean checkAvviabilitaCentralina(){
-                return((checkNumeroTelefono)&&(porteAUtilizzate==N_SENSORI_A)&&(porteBUtilizzate==N_SENSORI_B));
+               // return true;
+        return((checkNumeroTelefono)&&(porteAUtilizzate==N_SENSORI_A)&&(porteBUtilizzate==N_SENSORI_B));
     }
 
     public void checkSensori() throws CentralinaNonAvviabileException {
@@ -112,5 +113,9 @@ public class Centralina {
     }
     public String getNumeroDiTelefono() {
         return numeroDiTelefono;
+    }
+
+    public int getContatoreAllarmi() {
+        return contatoreAllarmi;
     }
 }
